@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pe1103.dir/main.c.o  -o pe1103 

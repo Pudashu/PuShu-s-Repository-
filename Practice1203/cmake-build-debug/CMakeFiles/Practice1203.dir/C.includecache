@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Ccode/Practice1203/main.c
+stdio.h
+-
+pe12-3a.h
+/mnt/d/Ccode/Practice1203/pe12-3a.h
+
+/mnt/d/Ccode/Practice1203/pe12-3a.h
+

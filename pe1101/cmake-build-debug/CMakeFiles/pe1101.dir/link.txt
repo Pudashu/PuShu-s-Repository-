@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pe1101.dir/main.c.o  -o pe1101 

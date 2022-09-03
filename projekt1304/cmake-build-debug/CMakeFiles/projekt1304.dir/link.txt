@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/projekt1304.dir/main.c.o  -o projekt1304 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Ccode/Practice1205/main.c
+stdio.h
+-
+stdlib.h
+-
+pe12-5a.h
+/mnt/d/Ccode/Practice1205/pe12-5a.h
+string.h
+-
+
+/mnt/d/Ccode/Practice1205/pe12-5a.h
+stdlib.h
+-
+

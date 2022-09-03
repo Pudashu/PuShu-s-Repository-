@@ -1,0 +1,3 @@
+/mnt/d/Ccode/pe0907/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/Ccode/pe0907/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Ccode/pe0907/cmake-build-debug/CMakeFiles/pe0907.dir

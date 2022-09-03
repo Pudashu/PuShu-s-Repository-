@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Practice1202.dir/main.c.o CMakeFiles/Practice1202.dir/pe12-2a.c.o  -o Practice1202 

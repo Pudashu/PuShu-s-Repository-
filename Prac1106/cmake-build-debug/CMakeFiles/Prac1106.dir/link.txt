@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Prac1106.dir/Prac1106.c.o  -o Prac1106 

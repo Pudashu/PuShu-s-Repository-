@@ -1,0 +1,3 @@
+/mnt/d/Ccode/projekt1304/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/Ccode/projekt1304/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Ccode/projekt1304/cmake-build-debug/CMakeFiles/projekt1304.dir
