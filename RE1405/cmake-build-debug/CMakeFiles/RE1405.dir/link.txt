@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/RE1405.dir/main.c.o  -o RE1405 

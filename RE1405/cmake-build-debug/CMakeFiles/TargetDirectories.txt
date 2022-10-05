@@ -1,0 +1,3 @@
+/mnt/d/Ccode/RE1405/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/Ccode/RE1405/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Ccode/RE1405/cmake-build-debug/CMakeFiles/RE1405.dir
