@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/a_bsum.dir/main.c.o  -o a_bsum 
