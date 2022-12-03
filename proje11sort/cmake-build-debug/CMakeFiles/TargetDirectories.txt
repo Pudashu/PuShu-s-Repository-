@@ -1,3 +1,0 @@
-/mnt/d/Ccode/proje11sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Ccode/proje11sort/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Ccode/proje11sort/cmake-build-debug/CMakeFiles/proje11sort.dir

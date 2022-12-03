@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Mycat.dir/main.c.o  -o Mycat 

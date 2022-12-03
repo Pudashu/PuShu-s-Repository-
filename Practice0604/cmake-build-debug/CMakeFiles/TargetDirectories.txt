@@ -1,3 +1,0 @@
-/mnt/d/Ccode/Practice0604/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Ccode/Practice0604/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Ccode/Practice0604/cmake-build-debug/CMakeFiles/Practice0604.dir

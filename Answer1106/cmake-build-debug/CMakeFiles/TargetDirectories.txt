@@ -1,3 +1,0 @@
-/mnt/d/Ccode/Answer1106/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Ccode/Answer1106/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Ccode/Answer1106/cmake-build-debug/CMakeFiles/Answer1106.dir

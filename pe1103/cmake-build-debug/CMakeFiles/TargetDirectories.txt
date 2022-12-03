@@ -1,3 +1,0 @@
-/mnt/d/Ccode/pe1103/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Ccode/pe1103/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Ccode/pe1103/cmake-build-debug/CMakeFiles/pe1103.dir

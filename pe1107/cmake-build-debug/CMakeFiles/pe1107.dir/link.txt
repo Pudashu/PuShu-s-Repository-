@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/pe1107.dir/main.c.o  -o pe1107 

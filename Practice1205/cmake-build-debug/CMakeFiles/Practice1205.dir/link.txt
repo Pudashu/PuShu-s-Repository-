@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Practice1205.dir/main.c.o  -o Practice1205 

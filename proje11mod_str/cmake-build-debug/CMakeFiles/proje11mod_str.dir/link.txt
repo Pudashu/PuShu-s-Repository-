@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/proje11mod_str.dir/main.c.o  -o proje11mod_str 

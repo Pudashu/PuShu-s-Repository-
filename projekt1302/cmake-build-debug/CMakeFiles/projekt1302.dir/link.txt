@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/projekt1302.dir/main.c.o  -o projekt1302 
