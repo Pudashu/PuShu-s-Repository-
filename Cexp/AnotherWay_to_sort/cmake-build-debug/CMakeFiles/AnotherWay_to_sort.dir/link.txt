@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/AnotherWay_to_sort.dir/main.c.o  -o AnotherWay_to_sort 

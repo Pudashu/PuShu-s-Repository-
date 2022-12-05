@@ -1,0 +1,3 @@
+/mnt/d/Computer_Science/Cexp/AnotherWay_to_sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/Computer_Science/Cexp/AnotherWay_to_sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Computer_Science/Cexp/AnotherWay_to_sort/cmake-build-debug/CMakeFiles/AnotherWay_to_sort.dir

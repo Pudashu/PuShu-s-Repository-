@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Computer_Science/Cexp/Listreverse/main.c
+stdio.h
+/mnt/d/Computer_Science/Cexp/Listreverse/stdio.h
+string.h
+/mnt/d/Computer_Science/Cexp/Listreverse/string.h
+stu.h
+/mnt/d/Computer_Science/Cexp/Listreverse/stu.h
+
+/mnt/d/Computer_Science/Cexp/Listreverse/stu.h
+stdlib.h
+-
+

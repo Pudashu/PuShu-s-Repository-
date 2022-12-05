@@ -1,0 +1,3 @@
+/mnt/d/Computer_Science/Cexp/Listreverse/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Computer_Science/Cexp/Listreverse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/Computer_Science/Cexp/Listreverse/cmake-build-debug/CMakeFiles/Listreverse.dir

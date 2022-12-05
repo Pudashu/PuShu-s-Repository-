@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Struct_Class_score.dir/Stuct_Class_Score.c.o  -o Struct_Class_score 
