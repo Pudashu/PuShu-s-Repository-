@@ -64,9 +64,9 @@ void (*ModifyGrades[4])(ID,PtrL,SCORE) = {Eng,Math,Phy,C};//选项3：更改程�
 void CntAve(PtrL,int, int**);
 void SortAve(PtrL,int);
 void OutputDetails(PtrL,int *,int);
+
+
 //正常统计total应该放在结构体里，或再写个函数，这里不做处理
-
-
 int main(void) {
     int choice,selection;
     PtrL p;

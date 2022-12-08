@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/Computer_Science/Cexp/Struct_Class_score/Stuct_Class_Score.c" "/mnt/d/Computer_Science/Cexp/Struct_Class_score/cmake-build-debug/CMakeFiles/Struct_Class_score.dir/Stuct_Class_Score.c.o"
+  "/mnt/d/Computer_Science/Ccode/Cexp/Struct_Class_score/Stuct_Class_Score.c" "/mnt/d/Computer_Science/Ccode/Cexp/Struct_Class_score/cmake-build-debug/CMakeFiles/Struct_Class_score.dir/Stuct_Class_Score.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
