@@ -15,6 +15,7 @@ typedef struct L_node{
     SCORE Physics;
     SCORE C;
     Average Ave;
+    SCORE total;
     struct L_node * next;
     struct L_node * prev;
 }L_NODE;
@@ -61,18 +62,21 @@ void C(ID StuID,PtrL head,SCORE C){
 }
 void (*ModifyGrades[4])(ID,PtrL,SCORE) = {Eng,Math,Phy,C};//选项3：更改程序
 
-void CntAve(PtrL,int, int**);
+void CntAve(PtrL,int);
 void SortAve(PtrL,int);
-void OutputDetails(PtrL,int *,int);
+void OutputDetails(PtrL,int);
+void Grades_in_File(PtrL,FILE*);
+PtrL Grades_out_File(FILE*);
 
 
 
+//正常统计total应该放在结构体里，或再写个函数，这里不做处理
 int main(void) {
+    FILE *fp;
     int choice,selection;
     PtrL p;
     int n=0;
-    int Score,*totScore = NULL;
-    float * Average;
+    int Score;
     char StuId[10];
     PtrL head = (PtrL)malloc(sizeof(L_NODE));
     head->next=NULL;
@@ -84,7 +88,7 @@ int main(void) {
         }
         else if(choice == 2){
             if(n) {
-                CntAve(head,n,&totScore);
+                CntAve(head,n);
                 SortAve(head,n);
                 OutputInfo(head, n);
             }
@@ -97,7 +101,7 @@ int main(void) {
             ModifyGrades[selection-1](StuId,head,Score);
         }
         else if(choice == 4){
-            CntAve(head,n,&totScore);
+            CntAve(head,n);
             SortAve(head,n);
             p = head->prev;
             for(int i = 0; i<n; i++){
@@ -106,10 +110,20 @@ int main(void) {
             }
         }
         else if(choice == 5){
-            CntAve(head,n,&totScore);
+            CntAve(head,n);
             SortAve(head,n);
-            CntAve(head,n,&totScore);
-            OutputDetails(head, totScore,n);
+            CntAve(head,n);
+            OutputDetails(head,n);
+        }
+        else if(choice == 6){
+            fp = fopen("stu.dat","wb");
+            Grades_in_File(head,fp);
+            fclose(fp);
+        }
+        else if(choice == 7){
+            fp = fopen("stu.dat","rb");
+            head = Grades_out_File(fp);
+            fclose(fp);
         }
         else printf("Wrong choice, please try again or input 0 to finish.");
     }
@@ -169,14 +183,13 @@ void OutputInfo(PtrL head,int n){
 
 
 
-void CntAve(PtrL head,int n,int ** totScore){
-    *totScore = (int *) malloc(n* sizeof(int));
+void CntAve(PtrL head,int n){
     int index = 0;
     int tot;
     PtrL p = head->prev;
     while(index < n){
         tot = p->English+p->Math+p->Physics+p->C;
-        (*totScore)[index] = tot;
+        p->total = tot;
         p->Ave = (float)tot / 4;
         p = p->prev;
         index++;
@@ -208,13 +221,28 @@ void SortAve(PtrL head,int n){
     }
 }//指针交换
 
-void OutputDetails(PtrL head,int * tot,int n){
+void OutputDetails(PtrL head,int n){
     PtrL p = head->prev;
 
     for(int i = 0; i < n;i++){
         printf("%s ",p->Id);
         printf("%s ",p->Name);
-        printf("%d %.2lf\n",tot[i],p->Ave);
+        printf("%d %.2lf\n",p->total,p->Ave);
         p = p->prev;
     }
+}
+
+void Grades_in_File(PtrL head,FILE *fp){
+    PtrL p = head -> prev;
+    while(p->prev != head) {
+        fprintf(fp, "%s %s %d %d %d %d %lf %d", p->Id, p->Name, p->English,
+                p->Math, p->Physics, p->C, p->Ave,p->total);
+        fputc('\n', fp);
+        p=p->prev;
+    }
+}
+
+PtrL Grades_out_File(FILE* fp){
+    PtrL head,p;
+    while(fscanf(fp,"%s %s %d %d %d %d %lf %d\n",p->Id,p->Name,p->English,p->Math,p->Physics,p->C,p->Ave,p->total)!=EOF)
 }

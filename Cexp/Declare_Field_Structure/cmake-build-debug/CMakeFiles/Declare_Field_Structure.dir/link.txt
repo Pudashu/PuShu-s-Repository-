@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Declare_Field_Structure.dir/Declare_diled_structure.c.o  -o Declare_Field_Structure 
