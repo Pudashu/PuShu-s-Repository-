@@ -64,7 +64,7 @@ void (*ModifyGrades[4])(ID,PtrL,SCORE) = {Eng,Math,Phy,C};//选项3：更改程�
 void CntAve(PtrL,int, int**);
 void SortAve(PtrL,int);
 void OutputDetails(PtrL,int *,int);
-//正常统计total应该放在结构体里，或再写个函数，这里不做处理
+
 
 
 int main(void) {
@@ -153,3 +153,68 @@ void InputInfo(PtrL head,int n){
 
 }
 
+
+
+
+
+void OutputInfo(PtrL head,int n){
+    PtrL p = head->prev;
+    for(int i = 0; i < n;i++){
+        printf("%s ",p->Id);
+        printf("%s ",p->Name);
+        printf("%d %d %d %d\n",p->English,p->Math,p->Physics,p->C);
+        p = p->prev;
+    }
+}
+
+
+
+void CntAve(PtrL head,int n,int ** totScore){
+    *totScore = (int *) malloc(n* sizeof(int));
+    int index = 0;
+    int tot;
+    PtrL p = head->prev;
+    while(index < n){
+        tot = p->English+p->Math+p->Physics+p->C;
+        (*totScore)[index] = tot;
+        p->Ave = (float)tot / 4;
+        p = p->prev;
+        index++;
+    }
+}
+void SortAve(PtrL head,int n){
+    PtrL p;
+    PtrL q;
+    for (int i = 0; i < n-1;i++){
+        p = head->prev;
+        q = p->prev;
+        for (int j = 0; j < n-i-1;j++) {
+
+            if(p->Ave > q->Ave){
+                q->prev->next = p;
+                p->next->prev = q;
+                q->next = p->next;
+                p->prev =q->prev;
+                q->prev = p;
+                p->next=q;
+                q=p->prev;
+            }
+            else{
+                p=p->prev;
+                q=p->prev;
+            }
+
+        }
+    }
+}//指针交换
+
+void OutputDetails(PtrL head,int * tot,int n){
+    PtrL p = head->prev;
+
+    for(int i = 0; i < n;i++){
+        printf("%s ",p->Id);
+        printf("%s ",p->Name);
+        printf("%d %.2lf\n",tot[i],p->Ave);
+        p = p->prev;
+    }
+}
