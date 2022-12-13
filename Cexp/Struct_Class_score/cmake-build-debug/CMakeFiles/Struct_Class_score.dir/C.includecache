@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Computer_Science/Ccode/Cexp/Struct_Class_score/Stuct_Class_Score.c
+stdio.h
+-
+string.h
+-
+malloc.h
+-
+

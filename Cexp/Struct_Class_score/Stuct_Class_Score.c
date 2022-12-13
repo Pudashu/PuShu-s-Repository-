@@ -65,8 +65,8 @@ void (*ModifyGrades[4])(ID,PtrL,SCORE) = {Eng,Math,Phy,C};//选项3：更改程�
 void CntAve(PtrL,int);
 void SortAve(PtrL,int);
 void OutputDetails(PtrL,int);
-void Grades_in_File(PtrL,FILE*);
-PtrL Grades_out_File(FILE*);
+void Grades_in_File(PtrL,FILE*,int );
+PtrL Grades_out_File(FILE*,int);
 
 
 
@@ -116,13 +116,15 @@ int main(void) {
             OutputDetails(head,n);
         }
         else if(choice == 6){
+            CntAve(head,n);
             fp = fopen("stu.dat","wb");
-            Grades_in_File(head,fp);
+            Grades_in_File(head,fp,n);
             fclose(fp);
         }
         else if(choice == 7){
+            CntAve(head,n);
             fp = fopen("stu.dat","rb");
-            head = Grades_out_File(fp);
+            head = Grades_out_File(fp,n);
             fclose(fp);
         }
         else printf("Wrong choice, please try again or input 0 to finish.");
@@ -232,17 +234,30 @@ void OutputDetails(PtrL head,int n){
     }
 }
 
-void Grades_in_File(PtrL head,FILE *fp){
-    PtrL p = head -> prev;
-    while(p->prev != head) {
-        fprintf(fp, "%s %s %d %d %d %d %lf %d", p->Id, p->Name, p->English,
-                p->Math, p->Physics, p->C, p->Ave,p->total);
-        fputc('\n', fp);
+void Grades_in_File(PtrL head,FILE *fp,int n){
+    PtrL p = head->prev;
+    for(int i=0; i<n ;i++) {
+        fwrite(p,sizeof(L_NODE),1,fp);
         p=p->prev;
     }
 }
+//很混乱
 
-PtrL Grades_out_File(FILE* fp){
-    PtrL head,p;
-    while(fscanf(fp,"%s %s %d %d %d %d %lf %d\n",p->Id,p->Name,p->English,p->Math,p->Physics,p->C,p->Ave,p->total)!=EOF)
+PtrL Grades_out_File(FILE* fp,int n){
+    PtrL headp = (PtrL)malloc(sizeof(L_NODE));
+    PtrL pp = (PtrL)malloc(sizeof(L_NODE));
+    headp->prev = pp;
+    headp->next = pp;
+    pp->prev = headp;
+    pp->next = headp;
+    for(int i = 0; i<n ; i++){
+        fread(pp,sizeof(L_NODE),1,fp);
+        pp->prev= (PtrL)malloc(sizeof(L_NODE));
+        pp->prev->next = pp;
+        pp->prev->prev = headp;
+        pp=pp->prev;
+        headp->next = pp;
+    }
+    headp->next = pp->next;
+    return headp;
 }
